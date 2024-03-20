@@ -33,7 +33,7 @@ int main(int argc, char **argv) {
     }
 
     // TODO: for now, hardcoding the Encodec model path
-    bctx->encodec_model_path = "/Users/pbannier/Documents/encodec.cpp/ggml_weights/ggml-model.bin";
+    bctx->encodec_model_path = params.model_path + "ggml-model.bin";
 
     // generate audio
     if (!bark_generate_audio(bctx, params.prompt, params.dest_wav_path, params.n_threads, verbosity)) {
